@@ -43,6 +43,8 @@ const Wrap = styled.div`
   justify-content: space-between; //vertial
   align-items: center;
   background-image: ${(props) => `url("/images/${props.bgImage}")`};
+  scroll-snap-align:start;
+  z-index:1;
 `;
 
 const ItemText = styled.div`

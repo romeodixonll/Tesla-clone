@@ -31,8 +31,8 @@ const Header = () => {
           <CustomClose onClick={() => setBurgerStatus(false)} />
         </CloseWrapper>
         {cars && cars.map((car, index)=>(
-          <li>
-          <a key={index} href="#">{car}</a>
+          <li key={index}>
+          <a  href="#">{car}</a>
         </li>
         ))}
         <li>
@@ -110,7 +110,6 @@ const BurgerNav = styled.div`
   right: 0;
   background: white;
   width: 300px;
-  z-index: 16;
   list-style: none;
   padding: 20px;
   display: flex;
@@ -125,6 +124,7 @@ const BurgerNav = styled.div`
       font-weight: 600;
     }
   }
+  z-index:10;
 `;
 
 const CustomClose = styled(CloseIcon)`
@@ -133,4 +133,5 @@ const CustomClose = styled(CloseIcon)`
 const CloseWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+
 `;
